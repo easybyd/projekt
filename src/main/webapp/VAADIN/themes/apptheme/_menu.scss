@@ -1,8 +1,7 @@
 @mixin menu {
   .app-shell {
     .logo {
-      // our logo text is white
-      color: #fff;
+      color: black;
       word-wrap: break-word;
     }
     .v-caption-logo {
@@ -23,7 +22,8 @@
         background: rgba(0, 0, 0, .2);
         color: lighten($v-focus-color, 60%);
         .v-icon, .v-button-caption {
-          color: lighten($v-focus-color, 60%);
+          //color: lighten($v-focus-color, 60%);
+          color: black;
         }
       }
       .activeViewName {

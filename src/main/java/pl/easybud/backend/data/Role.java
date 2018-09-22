@@ -1,8 +1,8 @@
 package pl.easybud.backend.data;
 
 public class Role {
-	public static final String BARISTA = "barista";
-	public static final String BAKER = "baker";
+	public static final String EMPLOYEE = "pracownik";
+	public static final String MANAGER = "kierownik";
 	public static final String ADMIN = "admin";
 
 	private Role() {
@@ -10,7 +10,7 @@ public class Role {
 	}
 
 	public static String[] getAllRoles() {
-		return new String[] { BARISTA, BAKER, ADMIN };
+		return new String[] {EMPLOYEE, MANAGER, ADMIN };
 	}
 
 }

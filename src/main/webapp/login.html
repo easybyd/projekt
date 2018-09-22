@@ -62,17 +62,6 @@ Vaadin-Refresh: context://login.html
     button {
       background-color: #4b4b65;
     }
-    #logo {
-      display: inline-block;
-      width: 60px;
-      height: 60px;
-      border-radius: 100%;
-      background-image: url(VAADIN/themes/apptheme/icon-96.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-color: rgba(255,255,255,0.2);
-      box-shadow: 3px 3px 8px rgba(0,0,0,.2);
-    }
 
 		/* Layout */
 		*, *:before, *:after {
@@ -84,7 +73,7 @@ Vaadin-Refresh: context://login.html
 			margin: 0;
 		}
 		#info {
-       color: #fff;
+       color: black;
        text-align: center;
        padding: 28px;
 		}
@@ -107,10 +96,6 @@ Vaadin-Refresh: context://login.html
 	      display: flex;
 	      align-items: center;
 	      justify-content: center;
-	    }
-	    #logo {
-	      width:96px;
-        height:96px;
 	    }
 	    #info, #form {
 	      height: 450px;
@@ -209,18 +194,17 @@ Vaadin-Refresh: context://login.html
 </head>
 <body onload="init()">
 	<div id="info">
-		<div id="logo"></div>
 		<h1>EasyBud</h1>
-		<p>admin@vaadin.com + admin <br> barista@vaadin.com + barista</p>
+		<p>admin@easybud.pl + admin <br> kierownik@easybud.pl + kierownik <br> pracownik@easybud.pl + pracownik</p>
 	</div>
 	<div id="form">
 		<form method="post" action="login" id="theform">
-			<h2>Sign in</h2>
+			<h2>Logowanie</h2>
 			<label id="login-label" for="login">Email</label>
 			<input type="text" id="login" name="username" aria-labelledby="login-label" autofocus>
-			<label id="password-label" for="password">Password</label>
+			<label id="password-label" for="password">Haslo</label>
 			<input type="password" id="password" name="password" aria-labelledby="password-label">
-			<button id="button-submit" type="submit">Sign in</button>
+			<button id="button-submit" type="submit">Zaloguj</button>
 		</form>
 	</div>
 </body>
