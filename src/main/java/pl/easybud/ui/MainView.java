@@ -14,6 +14,7 @@ import com.vaadin.navigator.ViewLeaveAction;
 import com.vaadin.spring.annotation.SpringViewDisplay;
 import com.vaadin.spring.annotation.UIScope;
 import pl.easybud.ui.navigation.NavigationManager;
+import pl.easybud.ui.views.admin.employee.EmployeeAdminView;
 import pl.easybud.ui.views.admin.product.ProductAdminView;
 import pl.easybud.ui.views.admin.user.UserAdminView;
 import pl.easybud.ui.views.dashboard.DashboardView;
@@ -49,6 +50,7 @@ public class MainView extends MainViewDesign implements ViewDisplay {
 		attachNavigation(dashboard, DashboardView.class);
 		attachNavigation(users, UserAdminView.class);
 		attachNavigation(products, ProductAdminView.class);
+		attachNavigation(employees, EmployeeAdminView.class);
 
 		logout.addClickListener(e -> logout());
 	}

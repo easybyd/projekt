@@ -56,10 +56,10 @@ import com.vaadin.ui.components.grid.SingleSelectionModel;
 @Secured(Role.ADMIN)
 public abstract class AbstractCrudView<T extends AbstractEntity> implements Serializable, View, HasLogger {
 
-	public static final String CAPTION_DISCARD = "Discard";
-	public static final String CAPTION_CANCEL = "Cancel";
-	public static final String CAPTION_UPDATE = "Update";
-	public static final String CAPTION_ADD = "Add";
+	public static final String CAPTION_DISCARD = "Cofnij";
+	public static final String CAPTION_CANCEL = "Anuluj";
+	public static final String CAPTION_UPDATE = "Zapisz";
+	public static final String CAPTION_ADD = "Dodaj";
 
 	@Override
 	public void enter(ViewChangeEvent event) {
