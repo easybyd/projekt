@@ -21,7 +21,7 @@
     </vaadin-horizontal-layout>
     <vaadin-css-layout style-name="content" size-full :expand>
         <vaadin-css-layout style-name="list" id="listParent" size-full _id="listParent">
-            <vaadin-grid id="list" size-full data-item-type="pl.easybud.backend.data.entity.Vehicle"
+            <vaadin-grid id="list" size-full data-item-type="pl.easybud.backend.data.entity.Job"
                          _id="list"></vaadin-grid>
         </vaadin-css-layout>
         <vaadin-vertical-layout enabled="false" style-name="inspect" spacing="false" id="form" size-full margin="false"
@@ -34,22 +34,16 @@
                     <vaadin-text-field caption="Nazwa skrócona" style-name="small" id="label" width-full _id="label"></vaadin-text-field>
                 </vaadin-css-layout>
                 <vaadin-css-layout style-name="section half" width-full>
-                    <com_vaadin_template_orders_ui_view_admin-tool-status-select style-name="small" id="status" width-full _id="status"></com_vaadin_template_orders_ui_view_admin-tool-status-select>
+                    <com_vaadin_template_orders_ui_view_admin-job-status-select style-name="small" id="status" width-full _id="status"></com_vaadin_template_orders_ui_view_admin-job-status-select>
                 </vaadin-css-layout>
                 <vaadin-css-layout style-name="section half" width-full>
-                    <vaadin-date-field caption="Data zakupu" lenient id="purchase" placeholder="Date" width="180px" _id="purchase"></vaadin-date-field>
+                    <vaadin-text-field caption="Adres" style-name="small" id="address" width-full _id="address"></vaadin-text-field>
                 </vaadin-css-layout>
                 <vaadin-css-layout style-name="section half" width-full>
-                    <vaadin-text-field caption="Nr Rej" style-name="small" id="regNumber" width-full _id="regNumber"></vaadin-text-field>
+                    <vaadin-date-field caption="Rozpoczęcie" lenient id="start" placeholder="Date" width="180px" _id="start"></vaadin-date-field>
                 </vaadin-css-layout>
                 <vaadin-css-layout style-name="section half" width-full>
-                    <vaadin-date-field caption="Ubezpieczenie" lenient id="insurance" placeholder="Date" width="180px" _id="insurance"></vaadin-date-field>
-                </vaadin-css-layout>
-                <vaadin-css-layout style-name="section half" width-full>
-                    <vaadin-date-field caption="Przegląd rej." lenient id="inspection" placeholder="Date" width="180px" _id="inspection"></vaadin-date-field>
-                </vaadin-css-layout>
-                <vaadin-css-layout style-name="section half" width-full>
-                    <vaadin-text-field caption="Ilość miejsc" style-name="small" id="seats" width-full _id="seats"></vaadin-text-field>
+                    <vaadin-date-field caption="Zakończenie" lenient id="end" placeholder="Date" width="180px" _id="end"></vaadin-date-field>
                 </vaadin-css-layout>
                 <vaadin-css-layout style-name="section half" width-full>
                     <vaadin-text-area rows="3" caption="Opis" style-name="comment long" id="description" width-full _id="description"></vaadin-text-area>

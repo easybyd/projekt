@@ -23,14 +23,12 @@ public class EmployeeAdminView extends AbstractCrudView<Employee> {
 	@Autowired
 	public EmployeeAdminView(EmployeeAdminPresenter presenter) {
 		this.presenter = presenter;
-//		this.priceToStringConverter = priceToStringConverter;
 		userAdminViewDesign = new EmployeeAdminViewDesign();
 	}
 
 	@PostConstruct
 	private void init() {
 		presenter.init(this);
-		// Show three columns: "name", "label" and "status".
 		getGrid().setColumns("name", "label", "status");
 
 	}

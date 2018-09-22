@@ -29,7 +29,7 @@ public class EquipmentAdminView extends AbstractCrudView<Equipment> {
   @PostConstruct
   private void init() {
     presenter.init(this);
-    getGrid().setColumns("name", "label", "status", "purchase", "serialNumber", "quarantee");
+    getGrid().setColumns("name", "label", "status", "quarantee");
   }
 
   @Override

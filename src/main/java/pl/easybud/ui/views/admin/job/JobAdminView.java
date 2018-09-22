@@ -1,4 +1,4 @@
-package pl.easybud.ui.views.admin.vehicle;
+package pl.easybud.ui.views.admin.job;
 
 import com.vaadin.data.BeanValidationBinder;
 import com.vaadin.spring.annotation.SpringView;
@@ -8,53 +8,53 @@ import com.vaadin.ui.Component.Focusable;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.TextField;
 import org.springframework.beans.factory.annotation.Autowired;
-import pl.easybud.backend.data.entity.Employee;
-import pl.easybud.backend.data.entity.Vehicle;
+import pl.easybud.backend.data.entity.Job;
 import pl.easybud.ui.views.admin.AbstractCrudView;
 
 import javax.annotation.PostConstruct;
 
 @SpringView
-public class VehicleAdminView extends AbstractCrudView<Vehicle> {
+public class JobAdminView extends AbstractCrudView<Job> {
 
-	private final VehicleAdminPresenter presenter;
+	private final JobAdminPresenter presenter;
 
-	private final VehicleAdminViewDesign userAdminViewDesign;
+	private final JobAdminViewDesign userAdminViewDesign;
 
 	@Autowired
-	public VehicleAdminView(VehicleAdminPresenter presenter) {
+	public JobAdminView(JobAdminPresenter presenter) {
 		this.presenter = presenter;
-		userAdminViewDesign = new VehicleAdminViewDesign();
+		userAdminViewDesign = new JobAdminViewDesign();
 	}
 
 	@PostConstruct
 	private void init() {
 		presenter.init(this);
-		getGrid().setColumns("name", "label", "status", "insurance", "inspection");
+		getGrid().setColumns("name", "label", "status", "start", "end");
+
 	}
 
 	@Override
-	public void bindFormFields(BeanValidationBinder<Vehicle> binder) {
+	public void bindFormFields(BeanValidationBinder<Job> binder) {
 		binder.bindInstanceFields(getViewComponent());
 	}
 
 	@Override
-	public VehicleAdminViewDesign getViewComponent() {
+	public JobAdminViewDesign getViewComponent() {
 		return userAdminViewDesign;
 	}
 
 	@Override
-	protected VehicleAdminPresenter getPresenter() {
+	protected JobAdminPresenter getPresenter() {
 		return presenter;
 	}
 
 	@Override
-	protected Grid<Vehicle> getGrid() {
+	protected Grid<Job> getGrid() {
 		return getViewComponent().list;
 	}
 
 	@Override
-	protected void setGrid(Grid<Vehicle> grid) {
+	protected void setGrid(Grid<Job> grid) {
 		getViewComponent().list = grid;
 	}
 

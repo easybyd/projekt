@@ -1,11 +1,14 @@
 package pl.easybud.backend.data.entity;
 
+import pl.easybud.backend.data.JobStatus;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 @Entity
-public class Employee extends AbstractEntity {
+public class Job extends AbstractEntity {
 
   @NotNull
   @Column(nullable = false)
@@ -13,20 +16,20 @@ public class Employee extends AbstractEntity {
 
   private String label;
 
-  //  private String phone;
-  //
-  //  @NotNull
-  //  @Enumerated(EnumType.STRING)
-  //  @Column(nullable = false)
-  //  private UserType userType;
-
   @NotNull
   @Column(nullable = false)
   private String status;
 
+  private String address;
+
+  private LocalDate start;
+
+  private LocalDate end;
+
   private String description;
-  //  @OneToMany(cascade = CascadeType.ALL)
-  //  private Set<Note> notes = new HashSet<>();
+
+  public Job() {
+  }
 
   public String getName() {
     return name;
@@ -52,6 +55,30 @@ public class Employee extends AbstractEntity {
     this.status = status;
   }
 
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public LocalDate getStart() {
+    return start;
+  }
+
+  public void setStart(LocalDate start) {
+    this.start = start;
+  }
+
+  public LocalDate getEnd() {
+    return end;
+  }
+
+  public void setEnd(LocalDate end) {
+    this.end = end;
+  }
+
   public String getDescription() {
     return description;
   }
@@ -59,4 +86,5 @@ public class Employee extends AbstractEntity {
   public void setDescription(String description) {
     this.description = description;
   }
+
 }
