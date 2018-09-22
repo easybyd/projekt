@@ -4,24 +4,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import pl.easybud.backend.repository.EmployeeRepository;
-import pl.easybud.backend.data.entity.Employee;
+import pl.easybud.backend.repository.VehicleRepository;
+import pl.easybud.backend.data.entity.Vehicle;
 
 import java.util.Optional;
 
 @Service
-public class EmployeeService extends CrudService<Employee> {
+public class VehicleService extends CrudService<Vehicle> {
 
-  private final EmployeeRepository employeeRepository;
+  private final VehicleRepository vehicleRepository;
 
   @Autowired
-  public EmployeeService(EmployeeRepository employeeRepository) {
-    this.employeeRepository = employeeRepository;
+  public VehicleService(VehicleRepository vehicleRepository) {
+    this.vehicleRepository = vehicleRepository;
   }
 
   @Override
-  protected EmployeeRepository getRepository() {
-    return employeeRepository;
+  protected VehicleRepository getRepository() {
+    return vehicleRepository;
   }
 
   @Override
@@ -35,7 +35,7 @@ public class EmployeeService extends CrudService<Employee> {
   }
 
   @Override
-  public Page<Employee> findAnyMatching(Optional<String> filter, Pageable pageable) {
+  public Page<Vehicle> findAnyMatching(Optional<String> filter, Pageable pageable) {
     if (filter.isPresent()) {
       String repositoryFilter = "%" + filter.get() + "%";
       return getRepository().findByNameLikeIgnoreCase(repositoryFilter, pageable);

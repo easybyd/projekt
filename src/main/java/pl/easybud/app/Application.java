@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.vaadin.spring.events.annotation.EnableEventBus;
 
 import pl.easybud.app.security.SecurityConfig;
-import pl.easybud.backend.OrderRepository;
+import pl.easybud.backend.repository.OrderRepository;
 import pl.easybud.backend.data.entity.Order;
 import pl.easybud.backend.service.UserService;
 import pl.easybud.backend.util.LocalDateJpaConverter;

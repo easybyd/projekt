@@ -15,8 +15,10 @@ import com.vaadin.spring.annotation.SpringViewDisplay;
 import com.vaadin.spring.annotation.UIScope;
 import pl.easybud.ui.navigation.NavigationManager;
 import pl.easybud.ui.views.admin.employee.EmployeeAdminView;
+import pl.easybud.ui.views.admin.equipment.EquipmentAdminView;
 import pl.easybud.ui.views.admin.product.ProductAdminView;
 import pl.easybud.ui.views.admin.user.UserAdminView;
+import pl.easybud.ui.views.admin.vehicle.VehicleAdminView;
 import pl.easybud.ui.views.dashboard.DashboardView;
 import pl.easybud.ui.views.storefront.StorefrontView;
 import com.vaadin.ui.Button;
@@ -46,11 +48,13 @@ public class MainView extends MainViewDesign implements ViewDisplay {
 
 	@PostConstruct
 	public void init() {
-		attachNavigation(storefront, StorefrontView.class);
-		attachNavigation(dashboard, DashboardView.class);
+//		attachNavigation(storefront, StorefrontView.class);
+//		attachNavigation(dashboard, DashboardView.class);
 		attachNavigation(users, UserAdminView.class);
-		attachNavigation(products, ProductAdminView.class);
+//		attachNavigation(products, ProductAdminView.class);
 		attachNavigation(employees, EmployeeAdminView.class);
+		attachNavigation(vehicles, VehicleAdminView.class);
+		attachNavigation(equipments, EquipmentAdminView.class);
 
 		logout.addClickListener(e -> logout());
 	}

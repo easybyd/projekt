@@ -1,4 +1,4 @@
-package pl.easybud.backend;
+package pl.easybud.backend.repository;
 
 import java.time.LocalDate;
 import java.util.Collection;

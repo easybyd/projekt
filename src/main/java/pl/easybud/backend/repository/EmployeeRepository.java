@@ -1,4 +1,4 @@
-package pl.easybud.backend;
+package pl.easybud.backend.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

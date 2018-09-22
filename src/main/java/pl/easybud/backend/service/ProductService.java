@@ -7,7 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import pl.easybud.backend.ProductRepository;
+import pl.easybud.backend.repository.ProductRepository;
 import pl.easybud.backend.data.entity.Product;
 
 @Service

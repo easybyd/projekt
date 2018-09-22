@@ -8,7 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import pl.easybud.backend.PickupLocationRepository;
+import pl.easybud.backend.repository.PickupLocationRepository;
 import pl.easybud.backend.data.entity.PickupLocation;
 
 @Service

@@ -18,7 +18,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import pl.easybud.backend.OrderRepository;
+import pl.easybud.backend.repository.OrderRepository;
 import pl.easybud.backend.data.DashboardData;
 import pl.easybud.backend.data.DeliveryStats;
 import pl.easybud.backend.data.OrderState;

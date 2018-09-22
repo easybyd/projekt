@@ -9,7 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import pl.easybud.backend.UserRepository;
+import pl.easybud.backend.repository.UserRepository;
 import pl.easybud.backend.data.entity.User;
 
 @Service
