@@ -10,39 +10,41 @@ import org.springframework.stereotype.Service;
 import pl.easybud.backend.repository.ProductRepository;
 import pl.easybud.backend.data.entity.Product;
 
-@Service
-public class ProductService extends CrudService<Product> {
+//@Service
+public class ProductService
+//		extends CrudService<Product>
+{
 
-	private final ProductRepository productRepository;
-
-	@Autowired
-	public ProductService(ProductRepository productRepository) {
-		this.productRepository = productRepository;
-	}
-
-	@Override
-	public Page<Product> findAnyMatching(Optional<String> filter, Pageable pageable) {
-		if (filter.isPresent()) {
-			String repositoryFilter = "%" + filter.get() + "%";
-			return getRepository().findByNameLikeIgnoreCase(repositoryFilter, pageable);
-		} else {
-			return getRepository().findAll(pageable);
-		}
-	}
-
-	@Override
-	public long countAnyMatching(Optional<String> filter) {
-		if (filter.isPresent()) {
-			String repositoryFilter = "%" + filter.get() + "%";
-			return getRepository().countByNameLikeIgnoreCase(repositoryFilter);
-		} else {
-			return getRepository().count();
-		}
-	}
-
-	@Override
-	protected ProductRepository getRepository() {
-		return productRepository;
-	}
+//	private final ProductRepository productRepository;
+//
+//	@Autowired
+//	public ProductService(ProductRepository productRepository) {
+//		this.productRepository = productRepository;
+//	}
+//
+//	@Override
+//	public Page<Product> findAnyMatching(Optional<String> filter, Pageable pageable) {
+//		if (filter.isPresent()) {
+//			String repositoryFilter = "%" + filter.get() + "%";
+//			return getRepository().findByNameLikeIgnoreCase(repositoryFilter, pageable);
+//		} else {
+//			return getRepository().findAll(pageable);
+//		}
+//	}
+//
+//	@Override
+//	public long countAnyMatching(Optional<String> filter) {
+//		if (filter.isPresent()) {
+//			String repositoryFilter = "%" + filter.get() + "%";
+//			return getRepository().countByNameLikeIgnoreCase(repositoryFilter);
+//		} else {
+//			return getRepository().count();
+//		}
+//	}
+//
+//	@Override
+//	protected ProductRepository getRepository() {
+//		return productRepository;
+//	}
 
 }

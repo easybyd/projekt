@@ -10,6 +10,7 @@ import com.vaadin.spring.internal.Conventions;
 import com.vaadin.spring.navigator.SpringNavigator;
 import pl.easybud.app.security.SecurityUtils;
 import pl.easybud.backend.data.Role;
+import pl.easybud.ui.views.admin.user.UserAdminView;
 import pl.easybud.ui.views.dashboard.DashboardView;
 import pl.easybud.ui.views.storefront.StorefrontView;
 
@@ -61,7 +62,7 @@ public class NavigationManager extends SpringNavigator {
 			return;
 		}
 
-		navigateTo(SecurityUtils.isCurrentUserInRole(Role.ADMIN) ? DashboardView.class : StorefrontView.class);
+		navigateTo(SecurityUtils.isCurrentUserInRole(Role.ADMIN) ? UserAdminView.class : UserAdminView.class);
 	}
 
 	/**

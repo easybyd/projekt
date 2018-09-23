@@ -15,31 +15,33 @@ import com.vaadin.spring.annotation.SpringComponent;
 import pl.easybud.backend.data.entity.Product;
 import pl.easybud.backend.service.ProductService;
 
-@SpringComponent
-public class ProductComboBoxDataProvider extends PageableDataProvider<Product, String> {
+//@SpringComponent
+public class ProductComboBoxDataProvider
+//		extends PageableDataProvider<Product, String>
+{
 
-	private final ProductService productService;
-
-	@Autowired
-	public ProductComboBoxDataProvider(ProductService productService) {
-		this.productService = productService;
-	}
-
-	@Override
-	protected Page<Product> fetchFromBackEnd(Query<Product, String> query, Pageable pageable) {
-		return productService.findAnyMatching(query.getFilter(), pageable);
-	}
-
-	@Override
-	protected int sizeInBackEnd(Query<Product, String> query) {
-		return (int) productService.countAnyMatching(query.getFilter());
-	}
-
-	@Override
-	protected List<QuerySortOrder> getDefaultSortOrders() {
-		List<QuerySortOrder> sortOrders = new ArrayList<>();
-		sortOrders.add(new QuerySortOrder("name", SortDirection.ASCENDING));
-		return sortOrders;
-	}
+//	private final ProductService productService;
+//
+//	@Autowired
+//	public ProductComboBoxDataProvider(ProductService productService) {
+//		this.productService = productService;
+//	}
+//
+//	@Override
+//	protected Page<Product> fetchFromBackEnd(Query<Product, String> query, Pageable pageable) {
+//		return productService.findAnyMatching(query.getFilter(), pageable);
+//	}
+//
+//	@Override
+//	protected int sizeInBackEnd(Query<Product, String> query) {
+//		return (int) productService.countAnyMatching(query.getFilter());
+//	}
+//
+//	@Override
+//	protected List<QuerySortOrder> getDefaultSortOrders() {
+//		List<QuerySortOrder> sortOrders = new ArrayList<>();
+//		sortOrders.add(new QuerySortOrder("name", SortDirection.ASCENDING));
+//		return sortOrders;
+//	}
 
 }

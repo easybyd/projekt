@@ -7,8 +7,6 @@ Vaadin-Refresh: context://login.html
 -->
 <head>
   <title>EasyBud</title>
-  
-  <link rel="shortcut icon" href="VAADIN/themes/apptheme/favicon.ico" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   
@@ -175,7 +173,7 @@ Vaadin-Refresh: context://login.html
 			border-color: red;
 		}
 		.error form:after {
-			content: "The username and password you entered do not match our records. Please double-check and try again.";
+			content: "Błędny login lub hasło. Sprawdź dane dologowania i spróbuj ponownie.";
 			display: block;
 			border: 1px solid red;
 			border-radius: 4px;
@@ -189,7 +187,7 @@ Vaadin-Refresh: context://login.html
 <body onload="init()">
 	<div id="info">
 		<h1>EasyBud</h1>
-		<p>admin@easybud.pl + admin <br> kierownik@easybud.pl + kierownik <br> pracownik@easybud.pl + pracownik</p>
+		<p>admin@easybud.pl / pass <br> kierownik@easybud.pl / pass <br> pracownik@easybud.pl / pass</p>
 	</div>
 	<div id="form">
 		<form method="post" action="login" id="theform">

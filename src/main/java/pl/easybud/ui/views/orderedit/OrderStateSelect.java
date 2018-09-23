@@ -6,15 +6,15 @@ import pl.easybud.app.HasLogger;
 import pl.easybud.backend.data.OrderState;
 import com.vaadin.ui.ComboBox;
 
-@SpringComponent
-@ViewScope
+//@SpringComponent
+//@ViewScope
 public class OrderStateSelect extends ComboBox<OrderState> implements HasLogger {
-
-	public OrderStateSelect() {
-		setEmptySelectionAllowed(false);
-		setTextInputAllowed(false);
-		setItems(OrderState.values());
-		setItemCaptionGenerator(OrderState::getDisplayName);
-	}
+//
+//	public OrderStateSelect() {
+//		setEmptySelectionAllowed(false);
+//		setTextInputAllowed(false);
+//		setItems(OrderState.values());
+//		setItemCaptionGenerator(OrderState::getDisplayName);
+//	}
 
 }

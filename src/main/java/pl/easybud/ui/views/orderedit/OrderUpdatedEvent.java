@@ -5,7 +5,7 @@ package pl.easybud.ui.views.orderedit;
  */
 public class OrderUpdatedEvent {
 
-	public OrderUpdatedEvent() {
-		// This is just a marker class to invoke the correct listener
-	}
+//	public OrderUpdatedEvent() {
+//		// This is just a marker class to invoke the correct listener
+//	}
 }

@@ -16,32 +16,34 @@ import com.vaadin.spring.annotation.SpringComponent;
 import pl.easybud.backend.data.entity.Product;
 import pl.easybud.backend.service.ProductService;
 
-@SpringComponent
-@PrototypeScope
-public class ProductAdminDataProvider extends FilterablePageableDataProvider<Product, Object> {
-
-	private final ProductService productService;
-
-	@Autowired
-	public ProductAdminDataProvider(ProductService productService) {
-		this.productService = productService;
-	}
-
-	@Override
-	protected Page<Product> fetchFromBackEnd(Query<Product, Object> query, Pageable pageable) {
-		return productService.findAnyMatching(getOptionalFilter(), pageable);
-	}
-
-	@Override
-	protected int sizeInBackEnd(Query<Product, Object> query) {
-		return (int) productService.countAnyMatching(getOptionalFilter());
-	}
-
-	@Override
-	protected List<QuerySortOrder> getDefaultSortOrders() {
-		List<QuerySortOrder> sortOrders = new ArrayList<>();
-		sortOrders.add(new QuerySortOrder("name", SortDirection.ASCENDING));
-		return sortOrders;
-	}
+//@SpringComponent
+//@PrototypeScope
+public class ProductAdminDataProvider
+//		extends FilterablePageableDataProvider<Product, Object>
+{
+//
+//	private final ProductService productService;
+//
+//	@Autowired
+//	public ProductAdminDataProvider(ProductService productService) {
+//		this.productService = productService;
+//	}
+//
+//	@Override
+//	protected Page<Product> fetchFromBackEnd(Query<Product, Object> query, Pageable pageable) {
+//		return productService.findAnyMatching(getOptionalFilter(), pageable);
+//	}
+//
+//	@Override
+//	protected int sizeInBackEnd(Query<Product, Object> query) {
+//		return (int) productService.countAnyMatching(getOptionalFilter());
+//	}
+//
+//	@Override
+//	protected List<QuerySortOrder> getDefaultSortOrders() {
+//		List<QuerySortOrder> sortOrders = new ArrayList<>();
+//		sortOrders.add(new QuerySortOrder("name", SortDirection.ASCENDING));
+//		return sortOrders;
+//	}
 
 }

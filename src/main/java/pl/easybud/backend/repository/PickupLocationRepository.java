@@ -6,9 +6,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import pl.easybud.backend.data.entity.PickupLocation;
 
-public interface PickupLocationRepository extends JpaRepository<PickupLocation, Long> {
+public interface PickupLocationRepository
+//    extends JpaRepository<PickupLocation, Long>
+{
 
-	Page<PickupLocation> findByNameLikeIgnoreCase(String nameFilter, Pageable pageable);
-
-	int countByNameLikeIgnoreCase(String nameFilter);
+//	Page<PickupLocation> findByNameLikeIgnoreCase(String nameFilter, Pageable pageable);
+//
+//	int countByNameLikeIgnoreCase(String nameFilter);
 }

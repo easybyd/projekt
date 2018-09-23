@@ -7,17 +7,17 @@ import com.vaadin.spring.annotation.SpringComponent;
 import pl.easybud.backend.data.entity.Product;
 import com.vaadin.ui.ComboBox;
 
-@SpringComponent
-@PrototypeScope
+//@SpringComponent
+//@PrototypeScope
 public class ProductComboBox extends ComboBox<Product> {
 
-	@Autowired
-	public ProductComboBox(ProductComboBoxDataProvider dataProvider) {
-		setWidth("100%");
-		setEmptySelectionAllowed(false);
-		setPlaceholder("Product");
-		setItemCaptionGenerator(Product::getName);
-		setDataProvider(dataProvider);
-	}
+//	@Autowired
+//	public ProductComboBox(ProductComboBoxDataProvider dataProvider) {
+//		setWidth("100%");
+//		setEmptySelectionAllowed(false);
+//		setPlaceholder("Product");
+//		setItemCaptionGenerator(Product::getName);
+//		setDataProvider(dataProvider);
+//	}
 
 }

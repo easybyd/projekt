@@ -10,13 +10,15 @@ import pl.easybud.backend.service.ProductService;
 import pl.easybud.ui.navigation.NavigationManager;
 import pl.easybud.ui.views.admin.AbstractCrudPresenter;
 
-@SpringComponent
-@ViewScope
-public class ProductAdminPresenter extends AbstractCrudPresenter<Product, ProductService, ProductAdminView> {
-
-	@Autowired
-	public ProductAdminPresenter(ProductAdminDataProvider productAdminDataProvider, NavigationManager navigationManager,
-			ProductService service, BeanFactory beanFactory) {
-		super(navigationManager, service, Product.class, productAdminDataProvider, beanFactory);
-	}
+//@SpringComponent
+//@ViewScope
+public class ProductAdminPresenter
+//		extends AbstractCrudPresenter<Product, ProductService, ProductAdminView>
+{
+//
+//	@Autowired
+//	public ProductAdminPresenter(ProductAdminDataProvider productAdminDataProvider, NavigationManager navigationManager,
+//			ProductService service, BeanFactory beanFactory) {
+//		super(navigationManager, service, Product.class, productAdminDataProvider, beanFactory);
+//	}
 }

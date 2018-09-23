@@ -6,10 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import pl.easybud.backend.data.entity.Product;
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface ProductRepository
+//    extends JpaRepository<Product, Long>
+{
 
-	Page<Product> findByNameLikeIgnoreCase(String name, Pageable page);
-
-	int countByNameLikeIgnoreCase(String name);
+//	Page<Product> findByNameLikeIgnoreCase(String name, Pageable page);
+//
+//	int countByNameLikeIgnoreCase(String name);
 
 }

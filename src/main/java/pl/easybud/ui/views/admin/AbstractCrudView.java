@@ -53,7 +53,7 @@ import com.vaadin.ui.components.grid.SingleSelectionModel;
  * @param <T>
  *            the type of entity which can be edited in the view
  */
-@Secured(Role.ADMIN)
+@Secured({Role.ADMIN, Role.MANAGER})
 public abstract class AbstractCrudView<T extends AbstractEntity> implements Serializable, View, HasLogger {
 
 	public static final String CAPTION_DISCARD = "Cofnij";

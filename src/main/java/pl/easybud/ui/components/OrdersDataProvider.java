@@ -18,51 +18,53 @@ import com.vaadin.spring.annotation.SpringComponent;
 import pl.easybud.backend.data.entity.Order;
 import pl.easybud.backend.service.OrderService;
 
-@SpringComponent
-@PrototypeScope
-public class OrdersDataProvider extends FilterablePageableDataProvider<Order, Object> {
+//@SpringComponent
+//@PrototypeScope
+public class OrdersDataProvider
+//		extends FilterablePageableDataProvider<Order, Object>
+{
 
-	private final OrderService orderService;
-	private LocalDate filterDate = LocalDate.now().minusDays(1);
-
-	@Autowired
-	public OrdersDataProvider(OrderService orderService) {
-		this.orderService = orderService;
-	}
-
-	@Override
-	protected Page<Order> fetchFromBackEnd(Query<Order, Object> query, Pageable pageable) {
-		return orderService.findAnyMatchingAfterDueDate(getOptionalFilter(), getOptionalFilterDate(), pageable);
-	}
-
-	private Optional<LocalDate> getOptionalFilterDate() {
-		if (filterDate == null) {
-			return Optional.empty();
-		} else {
-			return Optional.of(filterDate);
-		}
-	}
-
-	public void setIncludePast(boolean includePast) {
-		if (includePast) {
-			filterDate = null;
-		} else {
-			filterDate = LocalDate.now().minusDays(1);
-		}
-	}
-
-	@Override
-	protected int sizeInBackEnd(Query<Order, Object> query) {
-		return (int) orderService.countAnyMatchingAfterDueDate(getOptionalFilter(), getOptionalFilterDate());
-	}
-
-	@Override
-	protected List<QuerySortOrder> getDefaultSortOrders() {
-		List<QuerySortOrder> sortOrders = new ArrayList<>();
-		sortOrders.add(new QuerySortOrder("dueDate", SortDirection.ASCENDING));
-		sortOrders.add(new QuerySortOrder("dueTime", SortDirection.ASCENDING));
-		// id included only to always get a stable sort order
-		sortOrders.add(new QuerySortOrder("id", SortDirection.DESCENDING));
-		return sortOrders;
-	}
+//	private final OrderService orderService;
+//	private LocalDate filterDate = LocalDate.now().minusDays(1);
+//
+//	@Autowired
+//	public OrdersDataProvider(OrderService orderService) {
+//		this.orderService = orderService;
+//	}
+//
+//	@Override
+//	protected Page<Order> fetchFromBackEnd(Query<Order, Object> query, Pageable pageable) {
+//		return orderService.findAnyMatchingAfterDueDate(getOptionalFilter(), getOptionalFilterDate(), pageable);
+//	}
+//
+//	private Optional<LocalDate> getOptionalFilterDate() {
+//		if (filterDate == null) {
+//			return Optional.empty();
+//		} else {
+//			return Optional.of(filterDate);
+//		}
+//	}
+//
+//	public void setIncludePast(boolean includePast) {
+//		if (includePast) {
+//			filterDate = null;
+//		} else {
+//			filterDate = LocalDate.now().minusDays(1);
+//		}
+//	}
+//
+//	@Override
+//	protected int sizeInBackEnd(Query<Order, Object> query) {
+//		return (int) orderService.countAnyMatchingAfterDueDate(getOptionalFilter(), getOptionalFilterDate());
+//	}
+//
+//	@Override
+//	protected List<QuerySortOrder> getDefaultSortOrders() {
+//		List<QuerySortOrder> sortOrders = new ArrayList<>();
+//		sortOrders.add(new QuerySortOrder("dueDate", SortDirection.ASCENDING));
+//		sortOrders.add(new QuerySortOrder("dueTime", SortDirection.ASCENDING));
+//		// id included only to always get a stable sort order
+//		sortOrders.add(new QuerySortOrder("id", SortDirection.DESCENDING));
+//		return sortOrders;
+//	}
 }

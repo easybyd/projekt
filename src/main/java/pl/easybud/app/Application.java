@@ -9,16 +9,20 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.vaadin.spring.events.annotation.EnableEventBus;
 
 import pl.easybud.app.security.SecurityConfig;
+import pl.easybud.backend.data.entity.User;
 import pl.easybud.backend.repository.OrderRepository;
 import pl.easybud.backend.data.entity.Order;
+import pl.easybud.backend.repository.UserRepository;
 import pl.easybud.backend.service.UserService;
 import pl.easybud.backend.util.LocalDateJpaConverter;
 import pl.easybud.ui.AppUI;
 
 @SpringBootApplication(scanBasePackageClasses = { AppUI.class, Application.class, UserService.class,
 		SecurityConfig.class })
-@EnableJpaRepositories(basePackageClasses = { OrderRepository.class })
-@EntityScan(basePackageClasses = { Order.class, LocalDateJpaConverter.class })
+//@EnableJpaRepositories(basePackageClasses = { OrderRepository.class })
+//@EntityScan(basePackageClasses = { Order.class, LocalDateJpaConverter.class })
+@EnableJpaRepositories(basePackageClasses = { UserRepository.class })
+@EntityScan(basePackageClasses = { User.class, LocalDateJpaConverter.class })
 @EnableEventBus
 public class Application extends SpringBootServletInitializer {
 
