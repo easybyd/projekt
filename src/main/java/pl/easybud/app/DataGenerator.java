@@ -23,11 +23,8 @@ public class DataGenerator implements HasLogger {
 				return;
 			}
 
-			getLogger().info("Generating demo data");
-			getLogger().info("... generating users");
 			createUsers(userRepository, passwordEncoder);
-
-			getLogger().info("Generated demo data");
+			getLogger().info("Generated users");
 		};
 	}
 

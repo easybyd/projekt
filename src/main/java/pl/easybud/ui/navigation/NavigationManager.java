@@ -11,8 +11,6 @@ import com.vaadin.spring.navigator.SpringNavigator;
 import pl.easybud.app.security.SecurityUtils;
 import pl.easybud.backend.data.Role;
 import pl.easybud.ui.views.admin.user.UserAdminView;
-import pl.easybud.ui.views.dashboard.DashboardView;
-import pl.easybud.ui.views.storefront.StorefrontView;
 
 /**
  * Governs view navigation of the app.
@@ -55,9 +53,6 @@ public class NavigationManager extends SpringNavigator {
 	}
 
 	public void navigateToDefaultView() {
-		// If the user wants a specific view, it's in the URL.
-		// Otherwise admin goes to DashboardView and everybody else to
-		// OrderListView
 		if (!getState().isEmpty()) {
 			return;
 		}
