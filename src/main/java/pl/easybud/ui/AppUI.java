@@ -1,7 +1,5 @@
 package pl.easybud.ui;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.vaadin.addon.charts.ChartOptions;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
@@ -10,10 +8,11 @@ import com.vaadin.server.DefaultErrorHandler;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.spring.navigator.SpringViewProvider;
+import com.vaadin.ui.UI;
+import org.springframework.beans.factory.annotation.Autowired;
 import pl.easybud.app.HasLogger;
 import pl.easybud.ui.navigation.NavigationManager;
 import pl.easybud.ui.views.AccessDeniedView;
-import com.vaadin.ui.UI;
 
 @Theme("apptheme")
 @SpringUI

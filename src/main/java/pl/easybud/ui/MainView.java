@@ -10,6 +10,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.UI;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.easybud.ui.navigation.NavigationManager;
+import pl.easybud.ui.views.admin.contractor.ContractorAdminView;
 import pl.easybud.ui.views.admin.employee.EmployeeAdminView;
 import pl.easybud.ui.views.admin.equipment.EquipmentAdminView;
 import pl.easybud.ui.views.admin.job.JobAdminView;
@@ -41,6 +42,7 @@ public class MainView extends MainViewDesign implements ViewDisplay {
 		attachNavigation(vehicles, VehicleAdminView.class);
 		attachNavigation(equipments, EquipmentAdminView.class);
 		attachNavigation(jobs, JobAdminView.class);
+		attachNavigation(contractors, ContractorAdminView.class);
 
 		logout.addClickListener(e -> logout());
 	}

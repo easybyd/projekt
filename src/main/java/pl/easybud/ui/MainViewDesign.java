@@ -21,6 +21,7 @@ public class MainViewDesign extends HorizontalLayout {
   protected Button employees;
   protected Button vehicles;
   protected Button equipments;
+  protected Button contractors;
   protected Button logout;
   protected VerticalLayout content;
 
